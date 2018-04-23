@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Camera</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ camera.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ camera.name }}</td>
+            </tr>
+            <tr>
+                <th>Link</th>
+                <td>{{ camera.link }}</td>
+            </tr>
+            <tr>
+                <th>Proxy_link</th>
+                <td>{{ camera.proxylink }}</td>
+            </tr>
+            <tr>
+                <th>Process_id</th>
+                <td>{{ camera.processid }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('camera_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('camera_edit', { 'id': camera.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Cameras list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Link</th>
+                <th>Proxy_link</th>
+                <th>Process_id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for camera in cameras %}
+            <tr>
+                <td><a href="{{ path('camera_show', { 'id': camera.id }) }}">{{ camera.id }}</a></td>
+                <td>{{ camera.name }}</td>
+                <td>{{ camera.link }}</td>
+                <td>{{ camera.proxylink }}</td>
+                <td>{{ camera.processid }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('camera_show', { 'id': camera.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('camera_edit', { 'id': camera.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('camera_new') }}">Create a new camera</a>
+        </li>
+    </ul>
+{% endblock %}

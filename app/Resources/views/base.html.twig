@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}VideoCam{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('css/lib/bootstrap(3.3.7)/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/lib/bootstrap(3.3.7)/theme/inspinia(2.7.0).css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/lib/font-awesome(4.7.0)/font-awesome.min.css') }}" />
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,13 @@
+#authentication  .container:first-child{
+    height: 100%;
+    display: table;
+}
+#authentication  .container:first-child > .row{
+    display: table-cell;
+    vertical-align: middle;
+}
+@media screen and (max-width: 768px){
+    #authentication  .container:first-child{
+        width: 100%;
+    }
+}
