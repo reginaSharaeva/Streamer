@@ -1,0 +1,7 @@
+<?php
+namespace {namespace}\{patternName};
+interface {modelName}{patternName}{
+
+
+}
+?>

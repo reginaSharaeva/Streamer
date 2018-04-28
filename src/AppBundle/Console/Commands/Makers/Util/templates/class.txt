@@ -1,0 +1,10 @@
+<?php
+
+namespace {namespace}\{patternName}\Impl;
+use {namespace}\{patternName}\{modelName}{patternName};
+
+class {modelName}{patternName}Impl implements {modelName}{patternName}{
+
+}
+
+?>
